@@ -27,17 +27,17 @@ namespace EmployeeManagement_Day8
             Random random = new Random();
             //Computation
             int empChk = random.Next(3);
-            if (empChk == IS_FULL_TIME)
+            switch (empChk)
             {
-                empHrs = 8;
-            }
-            else if (empChk == IS_PART_TIME)
-            {
-                empHrs = 4;
-            }
-            else
-            {
-                empHrs = 0;
+                case IS_FULL_TIME:
+                    empHrs = 8;
+                    break;
+                case IS_PART_TIME:
+                    empHrs = 4;
+                    break;
+                default:
+                    empHrs = 0;
+                    break;
             }
             empWage = empHrs * EMP_RATE_PER_HOUR;
             Console.WriteLine("Employee Wage is : " + empWage);
