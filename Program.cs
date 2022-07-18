@@ -4,9 +4,8 @@
     {
         static void Main(string[] args)
         {
-            EmpWage empWage = new EmpWage();
-
-            empWage.EmpCheck();
+            EmpWage empWage = new EmpWage(20, 20, 100);
+            empWage.computeEmployeeWage();
         }
     }
 }
