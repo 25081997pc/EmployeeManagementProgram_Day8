@@ -11,6 +11,7 @@ namespace EmployeeManagement_Day8
         //This Program is used to calculate employee wage
         //Constant
         public const int IS_FULL_TIME = 1;
+        public const int IS_PART_TIME = 2;
         int EMP_RATE_PER_HOUR;
         //Constructor
         public EmpWage(int ERPH)
@@ -25,10 +26,14 @@ namespace EmployeeManagement_Day8
 
             Random random = new Random();
             //Computation
-            int empChk = random.Next(2);
+            int empChk = random.Next(3);
             if (empChk == IS_FULL_TIME)
             {
                 empHrs = 8;
+            }
+            else if (empChk == IS_PART_TIME)
+            {
+                empHrs = 4;
             }
             else
             {
