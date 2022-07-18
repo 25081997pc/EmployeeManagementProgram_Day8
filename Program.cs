@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Simulate Employee Wage Program");
+            EmpWage empWage = new EmpWage();
+            empWage.EmpCheck();
         }
     }
-   
 }
