@@ -9,14 +9,14 @@ namespace EmployeeManagement_Day8
     public class CompanyEmpWage
     {
         public string company;
-        public int empRatePerHour;
+        public int empRatePerHr;
         public int numOfWorkingDays;
         public int maxHrsPerMonth;
         public int totalEmpWage;
-        public CompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHrsPerMonth)
+        public CompanyEmpWage(string company, int empRatePerHr, int numOfWorkingDays, int maxHrsPerMonth)
         {
             this.company = company;
-            this.empRatePerHour = empRatePerHour;
+            this.empRatePerHr = empRatePerHr;
             this.numOfWorkingDays = numOfWorkingDays;
             this.maxHrsPerMonth = maxHrsPerMonth;
         }
@@ -28,5 +28,5 @@ namespace EmployeeManagement_Day8
         {
             return "Total Emp wage for Company : " + this.company + " is : " + this.totalEmpWage;
         }
-    }   
+    }
 }
