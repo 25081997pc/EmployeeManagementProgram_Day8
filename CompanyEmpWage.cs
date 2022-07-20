@@ -24,6 +24,7 @@ namespace EmployeeManagement_Day8
         {
             this.totalEmpWage = totalEmpWage;
         }
+
         public string toString()
         {
             return "Total Emp wage for Company : " + this.company + " is : " + this.totalEmpWage;
