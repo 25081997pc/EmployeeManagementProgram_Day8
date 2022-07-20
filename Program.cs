@@ -4,8 +4,9 @@
     {
         static void Main(string[] args)
         {
-            EmpWage empWage = new EmpWage(20, 20, 100);
-            empWage.computeEmployeeWage();
+            EmpWage empWage = new EmpWage();
+            empWage.computeEmployeeWage("DMart", 20, 4, 20);
+            empWage.computeEmployeeWage("Reliance", 18, 2, 10);
         }
     }
 }
