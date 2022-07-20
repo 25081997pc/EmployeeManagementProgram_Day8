@@ -6,11 +6,11 @@
         {
             Console.WriteLine("Welcome to Employee Management Program");
 
-            IComputeEmpWage empWageBuilderArray = new EmpWageBuilderArray();
+            IComputeEmpWage empWageBuilderObject = new EmpWageBuilderObject();
 
-            empWageBuilderArray.addCompanyEmpWage("DMart", 20, 4, 20);
-            empWageBuilderArray.addCompanyEmpWage("Reliance", 18, 2, 10);
-            empWageBuilderArray.computeEmpWage();
+            empWageBuilderObject.addCompanyEmpWage("DMart", 20, 4, 20);
+            empWageBuilderObject.addCompanyEmpWage("Reliance", 18, 2, 10);
+            empWageBuilderObject.computeEmpWage();
         }
     }
 }
