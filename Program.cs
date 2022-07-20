@@ -5,10 +5,10 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Employee Management Program");
-            EmpWageBuilderArray empWageBuilderArray = new EmpWageBuilderArray();
-            empWageBuilderArray.addCompanyEmpWage("DMart", 20, 4, 20);
-            empWageBuilderArray.addCompanyEmpWage("Reliance", 18, 2, 10);
-            empWageBuilderArray.computeEmpWage();
+            IComputeEmpWage empWageBuilderObject = new EmpWageBuilderObject();
+            empWageBuilderObject.addCompanyEmpWage("DMart", 20, 4, 20);
+            empWageBuilderObject.addCompanyEmpWage("Reliance", 18, 2, 10);
+            empWageBuilderObject.computeEmpWage();
         }
     }
 }
