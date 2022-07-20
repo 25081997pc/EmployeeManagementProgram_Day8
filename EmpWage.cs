@@ -8,27 +8,20 @@ namespace EmployeeManagement_Day8
 {
     public class EmpWage
     {
+        //This program is used to Compute employee wage for multiple companies.
+        //Constants
         public const int IS_FULL_TIME = 1;
         public const int IS_PART_TIME = 2;
-        int MAX_HRS_IN_MONTH;
-        int NUM_OF_WORKING_DAYS;
-        int EMP_RATE_PER_HOUR;
-        public EmpWage(int ERPR, int NOWD, int MHIM)
-        {
-            EMP_RATE_PER_HOUR = ERPR;
-            NUM_OF_WORKING_DAYS = NOWD;
-            MAX_HRS_IN_MONTH = MHIM;
-        }
-        public void computeEmployeeWage()
+        
+        public int computeEmployeeWage(string company,int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
             //Variables
             int empHrs = 0;
-            int empWage = 0;
             int totalEmpWage = 0;
             int totalEmpHrs = 0;
             int totalWorkingDays = 0;
             //Computation
-            while (totalWorkingDays < NUM_OF_WORKING_DAYS && totalEmpHrs <= MAX_HRS_IN_MONTH)
+            while (totalEmpHrs <= maxHoursPerMonth && totalWorkingDays < numOfWorkingDays)
             {
                 totalWorkingDays++;
                 Random random = new Random();
@@ -46,11 +39,11 @@ namespace EmployeeManagement_Day8
                         break;
                 }
                 totalEmpHrs += empHrs;
-                empWage = empHrs * EMP_RATE_PER_HOUR;
-                Console.WriteLine("Day# :" + totalWorkingDays + " Emp Hrs :" + empHrs + " EmpWage : " + empWage);
+                Console.WriteLine("Day# :" + totalWorkingDays + " Emp Hrs :" + empHrs);
             }
-            totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
-            Console.WriteLine("Total Emp Wage :" + totalEmpWage);
+            totalEmpWage = totalEmpHrs * empRatePerHour;
+            Console.WriteLine("Total Emp Wage for company :"  + company + " is : " + totalEmpWage);
+            return totalEmpWage;
         }
     }   
 }
