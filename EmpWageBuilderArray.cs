@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeManagement_Day8
 {
-    public class EmpWageBuilderArray
+    public class EmpWageBuilderArray : IComputeEmpWage
     {
         public const int IS_FULL_TIME = 1;
         public const int IS_PART_TIME = 2;
@@ -56,7 +56,7 @@ namespace EmployeeManagement_Day8
                 totalEmpHrs += empHrs;
                 Console.WriteLine("Day# : " + totalWorkingDays + " Emp Hrs : " + empHrs);
             }
-            return totalEmpHrs * companyEmpWage.empRatePerHour;
+            return totalEmpHrs * companyEmpWage.empRatePerHr;
         }
     }
 }
