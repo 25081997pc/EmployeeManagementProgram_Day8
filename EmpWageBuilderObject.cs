@@ -12,6 +12,7 @@ namespace EmployeeManagement_Day8
         public const int IS_PART_TIME = 2;
 
         private LinkedList<CompanyEmpWage> companyEmpWageList;      
+
         public EmpWageBuilderObject()
         {
             this.companyEmpWageList = new LinkedList<CompanyEmpWage>();
