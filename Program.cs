@@ -4,9 +4,14 @@
     {
         static void Main(string[] args)
         {
-            EmpWage empWage = new EmpWage();
-            empWage.computeEmployeeWage("DMart", 20, 4, 20);
-            empWage.computeEmployeeWage("Reliance", 18, 2, 10);
+            Console.WriteLine("Welcome to Employee Management Program");
+            
+            EmpWageBuilderObject dMart = new EmpWageBuilderObject("DMart", 20, 4, 20);
+            EmpWageBuilderObject reliance = new EmpWageBuilderObject("Reliance", 15, 2, 10);
+            dMart.computeEmpWage();
+            Console.WriteLine(dMart.toString());
+            reliance.computeEmpWage();
+            Console.WriteLine(reliance.toString());
         }
     }
 }
