@@ -13,6 +13,7 @@ namespace EmployeeManagement_Day8
         public int numOfWorkingDays;
         public int maxHrsPerMonth;
         public int totalEmpWage;
+
         public CompanyEmpWage(string company, int empRatePerHr, int numOfWorkingDays, int maxHrsPerMonth)
         {
             this.company = company;
