@@ -33,6 +33,7 @@ namespace EmployeeManagement_Day8
         private int computeEmpWage(CompanyEmpWage companyEmpWage)
         {
             int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
+            int DailyWage = 0, totalEmpWage = 0;
             while (totalEmpHrs <= companyEmpWage.maxHrsPerMonth && totalWorkingDays < companyEmpWage.numOfWorkingDays)
             {
                 totalWorkingDays++;
@@ -50,10 +51,11 @@ namespace EmployeeManagement_Day8
                         empHrs = 0;
                         break;
                 }
-                totalEmpHrs += empHrs;
-                Console.WriteLine("Day# : " + totalWorkingDays + " Emp Hrs: " + empHrs);
-            }  
-            return totalEmpHrs * companyEmpWage.empRatePerHr;
+                DailyWage = empHrs * companyEmpWage.empRatePerHr;
+                totalEmpWage += DailyWage;  
+                Console.WriteLine("Day# : " + totalWorkingDays + " Emp Hrs: " + empHrs + " DailyWage: " + DailyWage);
+            }
+            return totalEmpWage;
         }
     }
 }
