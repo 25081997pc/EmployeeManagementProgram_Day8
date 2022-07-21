@@ -19,12 +19,12 @@ namespace EmployeeManagement_Day8
             this.empRatePerHr = empRatePerHr;
             this.numOfWorkingDays = numOfWorkingDays;
             this.maxHrsPerMonth = maxHrsPerMonth;
+            this.totalEmpWage = 0;
         }
         public void setTotalEmpWage(int totalEmpWage)
         {
             this.totalEmpWage = totalEmpWage;
         }
-
         public string toString()
         {
             return "Total Emp wage for Company : " + this.company + " is : " + this.totalEmpWage;
