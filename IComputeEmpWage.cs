@@ -9,7 +9,9 @@ namespace EmployeeManagement_Day8
     public interface IComputeEmpWage
     {
         public void addCompanyEmpWage(string company, int empRatePerHr, int numOfWorkingDays, int maxHrsPerMonth);
+
         public void computeEmpWage();
 
+        public int getTotalWage(string company);
     }
 }
